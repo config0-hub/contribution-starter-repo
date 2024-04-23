@@ -1,11 +1,23 @@
 # starter repo
 
-This repository serves as an empty space where you can add your OpenTofu-based code. It is structured with three main folders designed for file insertion:
+This repository is dedicated to the conversion of your OpenTofu-based code into immutable workflows. These workflows are designed to be launchable and shareable for others to utilize. 
 
-- `shellouts/_config0_configs/`: This folder contains a sample script for installing `kubectl` specifically for Amazon Elastic Kubernetes Service (EKS).
+This repository provide samples files and skeleton directories where you can add your Terraform/OpenTofu code. It is structured as follows:
 
-- `execgroups/_config0_configs/`: Here, you will find an example of copying a simple Terraform code for creating an EC2 server, named "__ec2_server__".
+- `shellouts/_config0_configs/`
+   - This folder contains a sample script for installing `kubectl` specifically for Amazon Elastic Kubernetes Service (EKS).
 
-- `stacks/_config0_configs/`: This folder includes a sample for creating a stack (entry point) called "__aws_ec2_server__" for the `execgroup` "__ec2_server__".
+- `execgroups/_config0_configs/`
+   - This folder contains
+      - a template for copying/renaming to __\<new execgroup>__, adding your existing Terraform code, and checking the code in.
+      - an example for creating an EC2 VM execgroup named "__ec2_server__".
 
-This repository is dedicated to the conversion of your OpenTofu-based code into immutable workflows. These workflows are designed to be launchable and shareable for others to utilize. By leveraging the features and capabilities of this repository, you can transform your code into self-contained and reproducible workflows that can be easily executed and distributed among users.
+- `stacks/_config0_configs/`: 
+   - This folder contains
+     - a template for copying/renaming to __\<new stack>__ to serve as the entry point to __\< new execgroup>__ containing the unmodified Terraform code.
+     - an example for creating a stack (entry point) called "__aws_ec2_server__" for the `execgroup` "__ec2_server__".
+      
+- `sample/doks`:
+    - This folder contains
+       - __OpenTofu__ folder - contains sample unmodified OpenTofu files for creating Digital Ocean Kubernetes (doks)
+       - __Config0__ folder - contains sample Config0 file to create a stack or entry point for DOKS
