@@ -1,0 +1,9 @@
+desc: The stack is \<add description>
+release: 0.0.1
+categories: 
+   - aws
+   - cloud
+   - public_cloud
+tags:
+   - aws
+   - infrastructure
